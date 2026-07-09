@@ -1,0 +1,15 @@
+DEBUG:root:[]
+INFO:werkzeug:127.0.0.1 - - [06/Jul/2026 12:34:25] "GET /user/carlos HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jul/2026 12:35:18] "GET /user_pass_control HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jul/2026 12:35:25] "GET /get_users?hostname=google.com HTTP/1.1" 200 -
+DEBUG:root:[]
+INFO:werkzeug:127.0.0.1 - - [06/Jul/2026 12:36:57] "GET /user/admin HTTP/1.1" 200 -
+DEBUG:root:[]
+INFO:werkzeug:127.0.0.1 - - [06/Jul/2026 12:36:59] "GET /user/admin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jul/2026 12:38:04] "[31m[1mPOST /?hostname=google.com;%20cat%20/etc/passwd HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [06/Jul/2026 12:38:27] "[31m[1mPOST /?hostname=google.com;%20cat%20/etc/passwd HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [06/Jul/2026 12:38:50] "GET /?hostname=google.com;%20cat%20/etc/passwd HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jul/2026 12:39:40] "GET /upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Jul/2026 12:40:08] "GET /user_pass_control HTTP/1.1" 200 -
+DEBUG:root:[('test', 'test'), ('erlik', '$x&3de)GwWEIjyhpsA'), ('erlik', '12345'), ('erlik', 'f2Vbhj38qrS4018JDSKa'), ('test', '12345'), ('test', '$x&3de)GwWEIjyhpsA'), ('erlik', '66f2816ac6A!')]
+INFO:werkzeug:127.0.0.1 - - [06/Jul/2026 12:40:36] "GET /user/admin'%20OR%20'1'='1 HTTP/1.1" 200 -
