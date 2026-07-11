@@ -1,0 +1,49 @@
+Ejercicios de clase
+- EJERCICIO A.1: "Un cambio en la clave o en el mensaje provoca un gran cambio en el texto cifrado"
+
+Apartado 1) En cryptii, cifrad y descifrad la frase "Rodrigo Roman Castro" (sin comillas) con el algoritmo AES-128, la clave 2b 7e 14 16 28 ae d2 b6 ab f7 17 88 09 cf 4f 3c, el modo de operación CBC, y el IV 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00.
+NOTA: ¿Qué es el IV? Conocido como "Vector de inicialización", se utiliza en los modos de operación para que un mismo texto y una misma clave no tengan la misma salida.
+RESULTADO 1: 05 b0 04 b9 8d 25 ef 2a 28 19 17 a7 d3 57 fb 92 77 0c 03 2c e9 f9 03 ce a2 15 e7 c0 50 69 93 a7
+Apartado 2) Cambiar el apartado 1 para que la clave empiece por 1b... en vez de 2b...
+RESULTADO 2: f8 85 47 f3 71 c3 12 fa 2c f6 47 e6 d0 57 9b 46 ea 59 fa 1f b1 e7 25 b5 09 c8 a2 1f 41 b0 4a 33
+Apartado 3) Cambiar el apartado 1 poniendo en la frase a cifrar un acento sobre Román (es decir, cifrad "Rodrigo Román Castro" sin comillas).
+RESULTADO 3: 46 a6 d2 85 72 70 15 15 ba 04 ff c2 99 24 aa 05 7d cb f3 6d b0 10 5c d2 cb 06 75 5b 78 de 73 b7
+Apartado 4) Cambiar el apartado 1 poniendo como IV 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f
+RESULTADO 4: 9f e6 f5 50 50 0a 25 3a 61 55 99 90 bf 67 bd f8 c2 0b 90 4a 3d 50 d0 88 e6 61 b6 60 d5 e5 39 c9
+Apartado 5) Cambiar el apartado 1 poniendo al final de la frase a cifrar una exclamación "!" (es decir, cifrad "Rodrigo Roman Castro!" sin comillas) tanto en modo CBC como en modo CTR, y comparad los resultados con el resultado del ejercicio 1.
+RESULTADO 5.CBC: 05 b0 04 b9 8d 25 ef 2a 28 19 17 a7 d3 57 fb 92 3f 9a 03 80 3c 14 aa bc 90 39 f0 08 1e ff 3b 8a (por cierto, verás que al utilizar el mismo IV que el apartado 1, el cifrado del primer bloque (los primeros 128 bits) es el mismo...)
+RESULTADO 5.CTR: 42 6c 6f ea 60 73 5d f8 49 52 f9 bc 78 7e db 01 e8 d1 a6 42 a8
+
+- EJERCICIO A.2: "Cada modo de operación es distinto - CTR cifra bit a bit, y CBC cifra de 128 en 128 bits"
+
+Apartado 1) Con los mismos parámetros del apartado 1 del ejercicio A.1 (AES-128, Clave, IV), descifrad 42 6c 6f ea 60 73 5d f8 49 52 f9 bc 78 en el modo AES-CTR
+RESULTADO 6: Rodrigo Roman
+Apartado 2) Con los mismos parámetros del apartado 1 del ejercicio A.1 (AES-128, Clave, IV), descifrad a0 39 44 f5 55 57 dc cb 7e c6 9f c5 17 a4 d8 ec en el modo AES-CBC
+RESULTADO 7: Rodrigo Roman
+
+- EJERCICIO B.1: "Vamos a hacer paso a paso un cifrado con integridad (HMAC) en Cryptii"
+Apartado 1) Cifra "Rodrigo Roman" (sin comillas) en cryptii con los valores por defecto
+RESULTADO 1: 40 eb 15 63 ed 33 95 24 b7 2a 1d f6 95 9d 4c 95
+Apartado 2) Ahora, haz un HMAC del cifrado de "Rodrigo Roman" en "bytes", obtenido en el apartado 1, en cryptii con los valores por defecto
+RESULTADO 2: 07 1e d8 63 8e 49 07 7f f5 77 0f cd c1 5f a7 73 6b f3 7f c0 c7 24 51 63 c4 14 48 0c 5e fc 19 d7
+Apartado 3) Envías los resultados del apartado 1) y 2) por Internet, pero un maleante ha sustituido "40 eb 15 63 ed 33 95 24 b7 2a 1d f6 95 9d 4c 95" (el cifrado original) por "FF FF FF 63 ed 33 95 24 b7 2a 1d f6 95 9d 4c 95". ¿Como podemos saber que el cifrado se ha manipulado?
+RESULTADO 3: Hacemos el HMAC de FF FF FF 63 ed 33 95 24 b7 2a 1d f6 95 9d 4c 95, y vemos que no corresponde con lo obtenido en el apartado 2.
+
+- EJERCICIO C.1: "Funcionamiento de la criptografía asimétrica"
+Utiliza la web https://www.devglan.com/online-tools/rsa-encryption-decryption para descifrar (con una operación en descifrado con clave privada con los parámetros por defecto) el siguiente mensaje, utilizando la siguiente clave privada (que deberá copiarse en su sitio).
+Resultado: Rodrigo Roman Castro
+Mensaje a descifrar:
+FqpdBAmyYPh2tfEJU1sAzIIBGMqMlfvAd5aOnestqYccPHmqFJc4duAayoxcJFQiMtx2C3lSD2i8G+fBzuh5iXwu4/L6nspTx3jFPS9Npx88MWcVXaL839TFzk1u2BZjsNO4+T9b3k6WGFfzNpBolAvdIdFwWV8Z+MxDt65wEjEOK39iMEkJ7FDgRwvj/DlbLaRnmwTBU6mVy73gOaj/ihFpE0a6roEcXkglrvBKsdw8j91OxdKGKhAUZ+X5nQoYqEJPNmauu76HIDf95NZPrGhW4pk+3+gCcwlh66LFqPZtDS9VhmHrwpvZJebPl/q0yFeLKF7sdZyRbPNav2GbHw==
+Clave Privada:
+-----BEGIN RSA PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC00T07WAyE1zYs9xmLqw3b6xksi7j7E2t7AYSEgnOFOc1eV8iKHz0iJduHmKhDge5FZYl1D1D3BK2qTFQk1Xutg7e7jkmzPZ6/RH45j2VBmXxWGUSqCy9BKKiMbI37oXsha9/r2x98xoQdyFi8NCxzNFsqCR1XQM5iHikw4lt+2Hf18IQWTfSGxRY8UIDxKg+2ZLTDIKA0ygEYzZcoZJH0GDoecOce4qZa2xnBuvHXJi0jZ4TsFyqRUvDBd/+HojqcSBjEayccy8Gd7NUxa0HmtdxAs/nTx7r4wEum85o4YX8HLgEiOYGE4yP+oYHEsBXnTFk8VPYccbIpSokYGxTpAgMBAAECggEAJlS4+0yWEs8gn/WeB7qyTG2RP507EJa0UTYoJoMVBCgVviszyvwGVKfb2unkubLglPuKYTNnAYaPXiuiJtDO0CC9IVhvjTzB22AktgUM/RQRhJsEsFuAn/qDiIk2rCI2XQZmSLSB/0yCE2I2VWdmCOIPdWDLRITre2dTahaCOOhFhcBmSlZUaW0KpxMoOSusJA+QV7eSs9YrjXBeX1fSmRrRT9O1zzZ5eiuKuFgEzEBe+tGDBw/atyFvplTAlbY1JnWpmobLJaBNTTrfi5rmov9vNDlnv9aM3WLW/OhJjOroYUcErWYETzx4fD5PVB2788iWq95ib20xKcHhl4YQJQKBgQDWljKS5UCLNV1AgYbi+UrpfNXiYMiko3NG1IAm0BTtwCrWvyOCKHa3E3S+hg+5taD9YSqFTfuaGPTt64aT0NTY/XTGzevEU/GnSLcsUdquTSTz9Fk+seZ2LwBYvSbNnGaAHF+JCg5ET0PQP2fW7r4psJ2dV45GdJfuVpn5LJ60PwKBgQDXtqSa2YPOe/ZrBPU6Kf5p1jUYdIOJCgj13Y66QlfS6lxhy0zGSwM9opeq94OLVxn+vZqp2ZKDBOKhh4fbS/NXsdOh213M4HwlsTXK9B7cpQHzV5ChDeZqSYsYO1Bf8bXyLlnUdYFHLG57xlLA9UmTlz8BY+Gjeqz1iewlrvFM1wKBgHM3KehdVw5nlK4x3a64k1RSRrTJqnFboWWCa1xrlREigN3UusgD2dnqhGBXstHPh6UEKsRwXosao0erkhKDqgTn8W9c2R4MxE9BZ7hQKs4zdYfWxqQ2+Lqz+cerp832D8LxeQoncAmVVZ/Wq3ZnsYrI3ZfBjw6dQ4Yg0YNMRdoZAoGABd2LgEJl2Rl5y9Mor9owdsRCUVXptbI2KClMFjhzluKUfHxArCuh/O0M3rM4OnO12z1glTm7SCC74NSElyvrg/jr3jzOwiFgfs3gvpIAvNMnyGwbHKX6G+3AAHqsZs91uQ4VlzdSupK0tlzgJysEQyUbq3gBzKYrScnkR+oH2aUCgYEAgPJTVqI2ZQAi637eMWzgWyVEmlAzP3ZwDu7mEZfZk3t5zYqqv4btxX2XBwRw9FRSuW8z7HbLEKciK39n4nfYivzZD1hUKdXRq293dN4ftYzki7NCCKWX5nX1SN8y10g8aEZ7rJdOZ7tIxuGaLgtu49/LjVVuNe5F2+yvSPRDM28=
+-----END RSA PRIVATE KEY-----
+
+- EJERCICIO D.1: "Cifrados históricos"
+Apartado 1) Busca el descifrado de la frase "Unfyyrtnqbnynfbyhpvba" (sin comillas), cifrada con el cifrado césar. ¿La clave? No te la voy a decir...
+RESULTADO 1: Aquí ya vas por tu cuenta, ¡Suerte!
+Apartado 2) Dado el cifrado Vigenère "ntewmruzdntemgn" (sin comillas), ¿cual es el tamaño de la clave?
+RESULTADO 2: Aquí ya vas por tu cuenta, ¡Suerte!
+Apartado 3) Descifra en texto "mreok gzvms ollzj zcpjv jeikd" (sin comillas), cifrado con la máquina enigma M3 usando los parámetros "Reflector C", rotores III (posición 16) I (posición 12) y IV (posición 20), y plugboard gt re az ki os bn md
+RESULTADO 3: Aquí ya vas por tu cuenta, ¡Suerte!
+

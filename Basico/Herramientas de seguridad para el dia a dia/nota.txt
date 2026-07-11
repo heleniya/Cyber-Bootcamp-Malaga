@@ -1,0 +1,2 @@
+No puedo subir rockyou.txt, es demasiado grande.
+Rockyou.txt: Famoso archivo de diccionario que contiene millones de contraseñas reales filtradas en un ciberataque masivo a esta compañía en el año 2009.
