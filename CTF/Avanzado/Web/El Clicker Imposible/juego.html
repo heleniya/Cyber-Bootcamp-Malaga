@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Imposible</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333333;
+            text-align: center;
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            max-width: 450px;
+            width: 100%;
+        }
+        h1 {
+            color: #111111;
+            font-size: 26px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        p {
+            color: #666666;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .score {
+            font-size: 72px;
+            font-weight: bold;
+            margin: 30px 0;
+            color: #222222;
+        }
+        button {
+            padding: 16px 45px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: #dc3545;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+            box-shadow: 0 4px 6px rgba(220, 53, 69, 0.2);
+            text-transform: uppercase;
+        }
+        button:active {
+            transform: scale(0.96);
+        }
+        button:hover {
+            background-color: #c82333;
+        }
+        .reward {
+            margin-top: 30px;
+            display: none;
+            padding: 20px;
+            background-color: #f1f8f5;
+            border: 1px solid #c3e6cb;
+            border-radius: 6px;
+        }
+        .reward p {
+            color: #155724;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+        .flag {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+            color: #0b2e13;
+            letter-spacing: 1px;
+            background-color: #d4edda;
+            padding: 8px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Clicker Imposible</h1>
+        <p>Consigue 1.000.000 de clics para demostrar que eres un verdadero gamer y desbloquear la flag de victoria.</p>
+        
+        <div class="score" id="contador_visual">0</div>
+        
+        <button onclick="hacerClick()">Clic Aquí</button>
+
+        <div class="reward" id="bloque_victoria">
+            <p>Sistema hackeado con éxito. Aquí tienes tu recompensa:</p>
+            <div class="flag" id="texto_flag"></div>
+        </div>
+    </div>
+
+    <script>
+        let puntos = 0;
+
+        function hacerClick() {
+            puntos++;
+            actualizarPantalla();
+        }
+
+        function actualizarPantalla() {
+            document.getElementById("contador_visual").innerText = puntos;
+            
+            if (puntos >= 1000000) {
+                document.getElementById("bloque_victoria").style.display = "block";
+                
+                const datos_cifrados = [76, 70, 75, 77, 81, 66, 30, 73, 65, 117, 94, 66, 25, 117, 77, 75, 71, 25, 87];
+                let bandera_descifrada = "";
+                
+                for (let i = 0; i < datos_cifrados.length; i++) {
+                    bandera_descifrada += String.fromCharCode(datos_cifrados[i] ^ 42);
+                }
+                
+                document.getElementById("texto_flag").innerText = bandera_descifrada;
+            }
+        }
+    </script>
+</body>
+</html>

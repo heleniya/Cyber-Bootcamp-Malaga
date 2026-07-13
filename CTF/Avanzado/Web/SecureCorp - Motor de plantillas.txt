@@ -1,0 +1,11 @@
+SecureCorp — Motor de plantillas
+
+SecureCorp ofrece un compositor de alertas para avisar a sus clientes cuando algo se cae. Su gran orgullo son las etiquetas de personalización con [corchetes], que el sistema rellena solo antes de enviar cada aviso.
+
+Pero un motor que entiende [corchetes] casi siempre entiende mucho más. Consigue que el servidor evalúe lo que tú escribes y dejarás de redactar avisos para empezar a dar órdenes. Ojo un filtro silencioso rechaza ciertos mensajes con la excusa de que no son compatibles con las fuentes.
+
+Tu misión haz que la plantilla ejecute código, esquiva el filtro y lee el fichero flag.txt que vive junto a la aplicación, en su mismo directorio.
+
+URL http167.233.94.1488000
+
+Nota SecureCorp tiene varias vulnerabilidades en diferentes secciónes. Para este reto será necesario buscar la flag que se encuentra en Compositor de alertas

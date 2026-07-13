@@ -1,0 +1,7 @@
+El Clicker Imposible
+
+Un desarrollador ha creado un juego web minimalista y afirma que su sistema de seguridad es impenetrable.
+
+Ha escondido la flag detrás de un muro casi infranqueable el usuario debe conseguir obligatoriamente 1.000.000 de clicks para que el código libere la recompensa.
+
+Abre el archivo juego.html en tu navegador y obtén la flag.

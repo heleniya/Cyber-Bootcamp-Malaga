@@ -1,0 +1,11 @@
+SecureCorp — Centro de documentación
+
+El centro de documentación de SecureCorp carga cada guía por su nombre desde un directorio público, y ese nombre viaja a plena vista en la dirección de la web.
+
+Nuestros analistas están convencidos de que el visor no distingue entre un documento de ayuda y cualquier fichero del servidor. Si nadie valida la ruta que pides, puedes pedir lo que no deberías los ficheros internos que el equipo guarda, muy convenientemente, fuera del árbol público.
+
+Tu misión escápate del directorio de documentos y lee el fichero interno que custodia la bandera.
+
+URL http167.233.94.1488000
+
+Nota SecureCorp tiene varias vulnerabilidades en diferentes secciónes. Para este reto será necesario buscar la flag que se encuentra en Centro de documentación.
