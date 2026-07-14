@@ -1,0 +1,4 @@
+<?xm?>
+<!DOCTYPE note [<<?xm?>
+<!DO!ELEMENT note (body)><!ELEMENT note (body)><!ELEMENT body (fPCDATA)>]>
+<note lang="en"><body>Test</body></note>

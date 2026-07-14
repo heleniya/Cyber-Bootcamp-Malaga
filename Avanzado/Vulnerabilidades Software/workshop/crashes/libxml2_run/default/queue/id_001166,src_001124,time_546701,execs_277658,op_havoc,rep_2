@@ -1,0 +1,4 @@
+<?xA)>]>
+<note lang="en"><boml version="1.0"?>
+<!DOCTYPE note [<!ELEMENT Mote (body)><!ELEMENT note (body)><!ELEMENT body (#PCDATA)>]>
+<note lang="en"><body>Test</body></note>

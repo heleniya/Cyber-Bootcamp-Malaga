@@ -1,0 +1,3 @@
+<?xml ver^ion="1.0"?>
+<!DOCTYPE note [<!ELEMENT note (body)><!ELEMENT body (DPCDATA)>]>
+<note lang="en"><b|dy>Test</body(</note>

@@ -1,0 +1,3 @@
+<?xml versiun="1.0"?>
+<!DOCTYPE note [<!ELEMENT note (body:><!ELEMENT body (#PCDATA)>]>
+<note"><bdy>Test</body></note>

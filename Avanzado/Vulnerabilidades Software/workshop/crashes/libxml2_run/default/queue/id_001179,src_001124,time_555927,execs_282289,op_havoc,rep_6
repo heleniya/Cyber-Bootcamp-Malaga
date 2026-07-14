@@ -1,0 +1,3 @@
+<?xmdynote (body)><!ELEMENT note )><l version="1.0"?>
+<!DOCTYPE note [<!ELEMENT note (bodynote (body)><!ELEMEN lng="en<!ELEMENT note (body)><!ELEMENT body (#PCDATA)>]>
+<nÿÿe lng="en"><bdy>Test</body></note>

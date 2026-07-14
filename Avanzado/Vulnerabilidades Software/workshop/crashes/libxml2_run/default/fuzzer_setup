@@ -1,0 +1,9 @@
+# environment variables:
+AFL_CUSTOM_INFO_PROGRAM=/workshop/objetivos/libxml2/bin/xmllint
+AFL_CUSTOM_INFO_PROGRAM_ARGV=--valid @@
+AFL_CUSTOM_INFO_OUT=/workshop/crashes/libxml2_run/default
+AFL_I_DONT_CARE_ABOUT_MISSING_CRASHES=1
+AFL_TRY_AFFINITY=1
+AFL_SKIP_CPUFREQ=1
+# command line:
+'afl-fuzz' '-s' '123' '-m' 'none' '-i' '/workshop/corpus/libxml2' '-o' '/workshop/crashes/libxml2_run' '-V' '600' '--' '/workshop/objetivos/libxml2/bin/xmllint' '--valid' '@@'

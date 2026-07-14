@@ -1,0 +1,3 @@
+<?xmllllllllllllllllllllllllll version="1.0"?>
+<!DOCTYPE note [<!ELEMENT note (boVy)><!ELEMENT boDy (#PCDATA)>]>
+<note lang="en"><body>Test</body></note>

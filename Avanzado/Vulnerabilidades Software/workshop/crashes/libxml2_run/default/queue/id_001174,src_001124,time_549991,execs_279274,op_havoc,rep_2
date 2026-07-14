@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!DOCTYPE note [<!ELEMENT note (body)><!ELEMENT note (body)><!ELEMENT Vody (#PCDATA)>]>
+<notd lang="en"><body>Test</body></note>

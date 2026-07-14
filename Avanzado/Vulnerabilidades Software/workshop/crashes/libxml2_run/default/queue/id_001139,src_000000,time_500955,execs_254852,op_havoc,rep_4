@@ -1,0 +1,3 @@
+<?xmg version=ersion="1.0"1MENT body (#PCDATA)>.0"?>
+<!DOCTYPE note [<!ELEMENT note (body)><!ELEMENT body (#PCDATA)>]>
+<note lang="en"><body>Test</body></note>

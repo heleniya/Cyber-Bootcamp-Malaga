@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<!DOCTYPE note [<!ELEMENT note (body)><!ELEMENT body ( (bodyE><!ELEMENT body (#PCDATody>Test</body></note>

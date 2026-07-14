@@ -1,0 +1,3 @@
+<?xm?>
+<!DOCTYPE note [<!ELEMENT note (body)><!ELEMENT Lote (body)><!ELEMENT body (fP:DATA)>]>
+<note lang="en"><body>Test</body></note>

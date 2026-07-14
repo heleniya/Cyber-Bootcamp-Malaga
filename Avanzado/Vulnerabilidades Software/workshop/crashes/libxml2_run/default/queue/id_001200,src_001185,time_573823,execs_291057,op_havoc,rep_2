@@ -1,0 +1,3 @@
+<?xm?>
+<!DOCTYPE noet [<!ELEMENT note (body)><!ELEMENT note (body)><!ELEMENT body (fPCDATA)>]>
+<notenc lang="en"><body>Test</body></note>
